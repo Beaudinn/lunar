@@ -1,6 +1,11 @@
-# Lunar Admin Panel
+# Print4Sign Admin Panel
 
-See the docs at https://lunar-panel.vercel.app/
+### Update lunar form upstream git branch
+
+`git pull upstream 1.x`
+
+Sometimes, you'll likely run into conflicts when running this command, so carefully choose the changes (sorry!).
+
 
 ## TODO
 
