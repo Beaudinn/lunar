@@ -72,9 +72,11 @@ class CustomerGroupRelationManager extends RelationManager
                 ->color(fn (string $state): string => match ($state) {
                     '1' => 'success',
                     '0' => 'warning',
+					''  => 'heroicon-o-check-circle',
                 })->icon(fn (string $state): string => match ($state) {
                     '0' => 'heroicon-o-x-circle',
                     '1' => 'heroicon-o-check-circle',
+					''  => 'heroicon-o-check-circle',
                 });
         })->toArray();
 

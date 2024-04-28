@@ -77,6 +77,7 @@ class ShippingManifest implements ShippingManifestInterface
      */
     public function getOptions(Cart $cart): Collection
     {
+
         app(Pipeline::class)
             ->send($cart)
             ->through(

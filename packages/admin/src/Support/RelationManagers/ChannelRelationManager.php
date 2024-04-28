@@ -76,9 +76,11 @@ class ChannelRelationManager extends RelationManager
                     ->color(fn (string $state): string => match ($state) {
                         '1' => 'success',
                         '0' => 'warning',
+						default => 'gray',
                     })->icon(fn (string $state): string => match ($state) {
                         '0' => 'heroicon-o-x-circle',
                         '1' => 'heroicon-o-check-circle',
+						default => '',
                     }),
                 Tables\Columns\TextColumn::make('starts_at')->label(
                     __('lunarpanel::relationmanagers.channels.table.starts_at.label')

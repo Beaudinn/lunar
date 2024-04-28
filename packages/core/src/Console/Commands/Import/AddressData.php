@@ -82,6 +82,6 @@ class AddressData extends Command
 
         $this->components->info('Countries and States imported successfully');
 
-        exit(self::SUCCESS);
+        //exit(self::SUCCESS);
     }
 }

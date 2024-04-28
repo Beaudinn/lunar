@@ -102,9 +102,7 @@ class ProductOptionResource extends BaseResource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->modifyQueryUsing(
-                fn ($query) => $query->shared()
-            )
+           
             ->searchable();
     }
 

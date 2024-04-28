@@ -25,7 +25,7 @@ class Product extends Model
 When add this trait, you will have access to the `scheduleChannel` method:
 
 ```php
-$channel = App\Models\Channel::first();
+$channel = \App\Models\Lunar\Channel::first();
 
 // Will schedule for this product to be enabled in 14 days for this channel.
 // and will be disabled after 24 days

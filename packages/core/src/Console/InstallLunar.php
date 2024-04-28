@@ -65,7 +65,7 @@ class InstallLunar extends Command
         DB::transaction(function () {
             if (! Country::count()) {
                 $this->components->info('Importing countries');
-                $this->call('lunar:import:address-data');
+              //  $this->call('lunar:import:address-data');
             }
 
             if (! Channel::whereDefault(true)->exists()) {
@@ -222,6 +222,24 @@ class InstallLunar extends Command
                     ],
                     'system' => false,
                 ]);
+
+				Attribute::create([
+					'attribute_type' => Collection::class,
+					'attribute_group_id' => $collectionGroup->id,
+					'position' => 2,
+					'name' => [
+						'en' => 'Content',
+					],
+					'handle' => 'content',
+					'section' => 'main',
+					'type' => TranslatedText::class,
+					'required' => false,
+					'default_value' => null,
+					'configuration' => [
+						'richtext' => true,
+					],
+					'system' => false,
+				]);
             }
 
             if (! ProductType::count()) {

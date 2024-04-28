@@ -64,7 +64,7 @@ class ProductOption extends BaseModel implements SpatieHasMedia
     protected function label(): Attribute
     {
         return Attribute::make(
-            get: fn (string $value) => json_decode($value),
+            get: fn ( $value) => json_decode($value),
             set: fn ($value) => json_encode($value),
         );
     }

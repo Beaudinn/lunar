@@ -34,8 +34,7 @@ trait HasMedia
      */
     public function thumbnail(): MorphOne
     {
-        return $this->morphOne(config('media-library.media_model'), 'model')
-            ->where('custom_properties->primary', true);
+        return $this->morphOne(config('media-library.media_model'), 'model');
     }
 
     public function registerMediaCollections(): void
